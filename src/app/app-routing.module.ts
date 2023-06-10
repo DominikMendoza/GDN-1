@@ -6,7 +6,7 @@ import { FilterComponent } from './customers/pages/filter/filter.component';
 const routes: Routes = [
   { path: 'list', component: ListComponent },
   { path: 'filter', component: FilterComponent },
-  { path: '', redirectTo: '/filter', pathMatch: 'full' }
+  { path: '', redirectTo: '/list', pathMatch: 'full' }
 ];
 
 @NgModule({
