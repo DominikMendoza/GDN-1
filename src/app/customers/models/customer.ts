@@ -1,6 +1,6 @@
-export interface Cliente {
+export interface Customer {
     id: number;
-    nombre: string;
+    name: string;
     logo: string;
-    tiempo_de_llegada: Date;
+    arrival_time: Date;
 }
