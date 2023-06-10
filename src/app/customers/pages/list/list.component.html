@@ -1,1 +1,9 @@
-<p>list works!</p>
+<mat-card *ngFor="let customer of customers">
+    <mat-card-header>
+      <mat-card-title>{{ customer.name }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="customer.logo" alt="Logo de {{ customer.name }}">
+    <mat-card-content>
+      <p>{{ customer.arrival_time | date }}</p>
+    </mat-card-content>
+</mat-card>   
