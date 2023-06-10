@@ -1,17 +1,16 @@
 {
-    "clientes": [
-      {
-        "id": 1,
-        "nombre": "Equipo0001",
-        "logo": "https://avatars.githubusercontent.com/u/89035970?s=400&u=ea3d565efc0c09b34615e04dec5abcafa0c7065e&v=4",
-        "tiempo_de_llegada": "2023-06-10T14:48:00.000Z"
-      },
-      {
-        "id": 2,
-        "nombre": "Code Team",
-        "logo": "https://avatars.githubusercontent.com/u/89035970?s=400&u=ea3d565efc0c09b34615e04dec5abcafa0c7065e&v=4",
-        "tiempo_de_llegada": "2023-06-11T09:30:00.000Z"
-      }
-    ]
-  }
-  
+  "customers": [
+    {
+      "id": 1,
+      "name": "Equipo0001",
+      "logo": "https://avatars.githubusercontent.com/u/89035970?s=400&u=ea3d565efc0c09b34615e04dec5abcafa0c7065e&v=4",
+      "arrival_time": "2023-06-10T14:48:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Code Team",
+      "logo": "https://avatars.githubusercontent.com/u/89035970?s=400&u=ea3d565efc0c09b34615e04dec5abcafa0c7065e&v=4",
+      "arrival_time": "2023-06-11T09:30:00.000Z"
+    }
+  ]
+}
