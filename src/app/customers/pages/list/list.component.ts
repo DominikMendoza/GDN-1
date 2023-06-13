@@ -47,11 +47,11 @@ export class ListComponent implements OnInit, AfterViewInit{
     this.customerForm.resetForm();
   }
   
-  getCustomers(): void {
+  /*getCustomers(): void {
     this.customerService.getCustomers().subscribe(customers => this.customers = customers);
-  }
+  }*/
   getCustomersv2(): void {
-    this.customerService.getCustomers().subscribe(customers => this.dataCustomers.data = customers);
+    this.customerService.getCustomers().subscribe((customers: any) => this.dataCustomers.data = customers);
   }
 
   updateCustomer(customer: Customer): void {
@@ -72,8 +72,11 @@ export class ListComponent implements OnInit, AfterViewInit{
   }
 
   createCustomer(customer: Customer): void {
-    this.customerService.createCustomer(customer).subscribe(() => {
-      this.getCustomersv2();
+    this.customerData.id = 0;
+    this.customerService.createCustomer(customer).subscribe((response: any) => {
+      this.dataCustomers.data.push({...response});
+      this.dataCustomers.data = this.dataCustomers.data.map(o => Object.assign({}, o));
+      //this.getCustomersv2();
     });
   }
 

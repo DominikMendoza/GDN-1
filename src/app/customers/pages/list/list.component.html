@@ -10,13 +10,16 @@
 <div class="table-wrapper">
     <h1>Customers Catalogue</h1>
     <h2>{{ isEdit? 'Edit Customer' : 'Add New Customer'}}</h2>
-    <form (submit)="onSubmit()" #studentForm='ngForm'>
+    <form (submit)="onSubmit()" #customerForm='ngForm'>
         <mat-form-field>
             <input matInput placeholder="Name" name="name" required [(ngModel)]="customerData.name" />
         </mat-form-field>
-        <!--mat-form-field>
+        <mat-form-field>
             <input matInput placeholder="Logo" name="logo" required [(ngModel)]="customerData.logo" />
-        </mat-form-field-->
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Arrival time" name="arrival_time" required [(ngModel)]="customerData.arrival_time" />
+        </mat-form-field>
         <ng-container *ngIf="isEdit; else elseTemplate">
             <button mat-button color="primary">Update</button>
             <button mat-button color="warn" (click)="cancelEdit()">Cancel</button>
